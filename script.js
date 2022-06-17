@@ -106,10 +106,15 @@ const VoiceRSS = {
   },
 };
 
-function test() {
+function toggleButton() {
+  button.disabled = !button.disabled;
+}
+
+function tellMeJoke(joke) {
+  console.log("Tell me:", joke);
   VoiceRSS.speech({
-    key: `${API_KEY}`,
-    src: "How was your day?",
+    key: key,
+    src: joke,
     hl: "en-us",
     v: "Linda",
     r: 0,
@@ -119,4 +124,23 @@ function test() {
   });
 }
 
-test();
+async function getJokes() {
+  let joke = "";
+  const jokeApiUrl = "https://v2.jokeapi.dev/joke/Any";
+  try {
+    const response = await fetch(jokeApiUrl);
+    const data = await response.json();
+    if (data.setup) {
+      joke = `${data.setup}...${data.delivery}`;
+    } else {
+      joke = data.joke;
+    }
+    tellMeJoke(joke);
+    toggleButton();
+  } catch (err) {
+    console.log("fetch failed", err);
+  }
+}
+
+button.addEventListener("click", getJokes);
+audioElement.addEventListener("ended", toggleButton);
