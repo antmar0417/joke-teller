@@ -1,6 +1,6 @@
 const button = document.getElementById("button");
 const audioElement = document.getElementById("audio");
-const API_KEY = config.API_KEY;
+// const API_KEY = config.API_KEY;
 const jokeText = document.querySelector(".joke-text");
 
 // VoiceRSS Javascript SDK
