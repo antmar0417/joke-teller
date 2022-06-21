@@ -1,6 +1,7 @@
 const button = document.getElementById("button");
 const audioElement = document.getElementById("audio");
 const key = config.API_KEY;
+const jokeText = document.querySelector(".joke-text");
 
 // VoiceRSS Javascript SDK
 const VoiceRSS = {
@@ -124,6 +125,10 @@ function tellMeJoke(joke) {
   });
 }
 
+function displayJoke(joke) {
+  jokeText.innerHTML = joke;
+}
+
 async function getJokes() {
   let joke = "";
   const jokeApiUrl = "https://v2.jokeapi.dev/joke/Any";
@@ -136,6 +141,7 @@ async function getJokes() {
       joke = data.joke;
     }
     tellMeJoke(joke);
+    displayJoke(joke);
     toggleButton();
   } catch (err) {
     console.log("fetch failed", err);

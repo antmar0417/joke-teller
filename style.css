@@ -27,7 +27,7 @@ button {
   height: 50px;
   font-family: "Courier New", Courier, monospace;
   font-size: 20px;
-  color: white;
+  color: aliceblue;
   background: #ff3482;
   border: none;
   border-radius: 5px;
@@ -47,6 +47,18 @@ button:disabled {
   filter: brightness(30%);
 }
 
+.joke-text {
+  position: absolute;
+  font-size: 20px;
+  color: aliceblue;
+  background-color: #ff3482;
+  border-radius: 4px;
+  margin-top: 580px;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  max-width: 650px;
+}
+
 @media screen and (max-width: 1000px) {
   .container {
     background-position: center center;
@@ -55,5 +67,9 @@ button:disabled {
 
   button {
     box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .joke-text {
+    margin-top: 620px;
   }
 }
