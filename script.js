@@ -1,6 +1,7 @@
 const button = document.getElementById("button");
 const audioElement = document.getElementById("audio");
-import API_KEY from "./config.js";
+// import API_KEY from "./config.js";
+const API_KEY = "";
 const jokeText = document.querySelector(".joke-text");
 
 // VoiceRSS Javascript SDK
