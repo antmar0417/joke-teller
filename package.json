@@ -1,0 +1,24 @@
+{
+  "name": "joke-teller",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.9.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antmar0417/joke-teller.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antmar0417/joke-teller/issues"
+  },
+  "homepage": "https://github.com/antmar0417/joke-teller#readme"
+}
