@@ -1,3 +1,4 @@
+import "./style.css";
 const button = document.getElementById("button");
 const audioElement = document.getElementById("audio");
 const API_KEY = import.meta.env.VITE_API_KEY;
