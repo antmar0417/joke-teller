@@ -1,7 +1,7 @@
 import "./style.css";
 const button = document.getElementById("button");
 const audioElement = document.getElementById("audio");
-const API_KEY = import.meta.env.VITE_API_KEY;
+// const API_KEY = import.meta.env.VITE_API_KEY;
 const jokeText = document.querySelector(".joke-text");
 
 // VoiceRSS Javascript SDK
@@ -115,7 +115,7 @@ function toggleButton() {
 function tellMeJoke(joke) {
   console.log("Tell me:", joke);
   VoiceRSS.speech({
-    key: API_KEY,
+    key: import.meta.env.VITE_API_KEY,
     src: joke,
     hl: "en-us",
     v: "Linda",
